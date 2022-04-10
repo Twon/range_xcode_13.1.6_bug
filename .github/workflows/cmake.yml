@@ -34,9 +34,6 @@ jobs:
           }
     steps:
       - uses: actions/checkout@v2
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        timeout-minutes: 15
       - name: Add msbuild to PATH
         if: matrix.settings.os == 'windows-latest'
         uses: microsoft/setup-msbuild@v1.0.2
@@ -87,3 +84,6 @@ jobs:
       - name: Build
         # Build your program with the given configuration
         run: cd ${{github.workspace}}/build && ls -l && cmake --build ./ --config ${{ matrix.configuration }}
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 15
