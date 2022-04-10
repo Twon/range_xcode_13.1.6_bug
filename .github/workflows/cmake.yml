@@ -33,9 +33,9 @@ jobs:
             compiler: { type: APPLE_CLANG, version: "13.0", cc: "clang", cxx: "clang++", std: 20 }
           }
         - {
-            name: "MacOS Apple Clang 13.3",
+            name: "MacOS Apple Clang 13.2",
             os: macos-latest,
-            compiler: { type: APPLE_CLANG, version: "13.3", cc: "clang", cxx: "clang++", std: 20 }
+            compiler: { type: APPLE_CLANG, version: "13.2", cc: "clang", cxx: "clang++", std: 20 }
           }
     steps:
       - uses: actions/checkout@v2
