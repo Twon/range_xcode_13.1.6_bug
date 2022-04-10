@@ -4,6 +4,9 @@ project(ranges_build_issue)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_BINARY_DIR})
 
+message(STATUS "Module path: ${CMAKE_MODULE_PATH}")
+message(STATUS "Build directory: ${CMAKE_BINARY_DIR}")
+
 find_package(range-v3 REQUIRED)
 
 set(CMAKE_CXX_STANDARD 20)
