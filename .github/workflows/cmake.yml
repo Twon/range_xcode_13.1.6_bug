@@ -68,7 +68,8 @@ jobs:
         run: |
           conan config init
           if [[ "${{ matrix.settings.compiler.type }}" == "GCC" || "${{ matrix.settings.compiler.type }}" == "CLANG" ]]; then
-            conan profile update settings.compiler=${{ matrix.settings.compiler.cc }} settings.compiler.libcxx=${{ matrix.settings.lib }} default
+            conan profile update settings.compiler=${{ matrix.settings.compiler.cc }} default
+            conan profile update settings.compiler.libcxx=${{ matrix.settings.lib }} default
           fi
           conan profile show default
       - name: Configure Install
