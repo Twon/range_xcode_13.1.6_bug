@@ -83,4 +83,4 @@ jobs:
 
       - name: Build
         # Build your program with the given configuration
-        run: cd ${{github.workspace}}/build && cmake --build ../ --config ${{ matrix.configuration }}
+        run: cd ${{github.workspace}}/build && cmake --build ./ --config ${{ matrix.configuration }}
