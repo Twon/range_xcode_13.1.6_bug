@@ -57,7 +57,7 @@ jobs:
           version: ${{ matrix.settings.compiler.version }}
           platform: x64
       - name: Select Xcode 13.0
-        if: matrix.config.compiler.type == 'APPLE_CLANG'
+        if: matrix.settings.os == 'macos-latest'
         uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '${{matrix.config.compiler.version}}'
